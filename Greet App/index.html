@@ -1,0 +1,57 @@
+<!- Grey dot tells that the document isn't saved 
+So always save a document before running as code will not work untill it is saved -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN 1st App</title>
+    <script src="scripts/logic.js" defer>
+    //always give relative path instead of absolute path i.e. path of C drive D drive.
+    //this makes it easier for hosting
+
+    /*
+    
+    For faster execution wrap the script in a fucntion and it will not execute it untill and unless it is called
+    Therefore only funcition is loaded in memeory and it doesn't slow the website
+    Or use 'defer' which make script load after loading the whole html page.
+    defer – lazy loads the script. i.e. it doesn’t loads until the entire page is loaded.
+    this way we donot have to put script below </head> tag
+
+    Without the defer the scripts 'Eager Loads'
+
+    Other keyword is 'async' -Scripts Runs parallely but it should not be dependent to the page
+    Only use aysnc with independent scripts
+    With async the task of loading the script is given to another Thread that sole's purpose is for the loding of the script
+
+    Synchronization - Blocks the below code and doesn't let unless the present code is loaded
+    Thread - Code in execution
+
+    */
+    </script>
+    
+</head>
+<body>
+
+    <!-- div>h1+(label+input)*2+(button)*2 -->
+
+    <div>
+        <h1>Greet App by Abhishek Developer</h1>
+        <label for="">First Name</label>
+        <input id="first" type="text" placeholder="Enter your first name">
+        <br><br>
+        <label for="">Last Name</label>
+        <input id="last" type="text", placeholder="Enter your last name">
+    
+        <!-- Short Hand for above code
+        h1+(label+input)*2
+        -->
+        <br><br>
+        <!-- <button onclick="sayWelcome()">Greet</button>&nbsp;<button>ClearAll</button> -->
+        <!-- static binding of onclick to button is considered to be bad as we are binding in the html tag and it lowers the performance -->
+        <button id="bt1">Greet</button><button id="btClear">Clear All</button>
+        <p id="output"></p>
+    </div>
+
+</body>
+</html>
