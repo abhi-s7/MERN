@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy</title>
+    <link rel="stylesheet" href="css/design.css">
+    <script src="scripts/logic.js"></script>
+
+</head>
+
+<body>
+    <h1>Image Seach Engine</h1>
+    <input id='txt' type="text" placeholder="Enter text">
+    <button id="btnSearch">Search</button>
+    <hr>
+    <!-- <hr> for horizontal line -->
+    <!-- we don't want to load the gif image every time again the user searches. There fore we add it here and hide it -->
+    <!-- we do this by using toggle -->
+    <div id="loading" class="hide">
+        <img src="images/loadgif.gif">
+    </div>
+    <div id='result'>
+
+    </div>
+</body>
+
+</html>

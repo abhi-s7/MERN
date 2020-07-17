@@ -1,0 +1,10 @@
+.hide{ 
+    /* this is class */
+    display: none;
+}
+
+/*class for resizing the images*/
+.size{
+    width: 200px;
+    height: 200px;
+}
