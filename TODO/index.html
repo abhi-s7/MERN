@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- **************this is font awesome icons from bootstrap***************** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ************************************************************************ -->
+    <link rel="stylesheet" href="css/design.css">
+    <script src="scripts/utils/utility.js"></script>
+    <script src="scripts/utils/config.js"></script>
+    <script src="scripts/model/task.js"></script>
+    <script src="scripts/model/taskcontroller.js"></script>
+    <script src="scripts/controller.js"></script>
+</head>
+
+<body>
+
+    <div class='container'>
+        <h1 class='alert-info text-center'>TODO App</h1>
+
+        <div class="form-group">
+            <label for="">ID</label>
+            <!-- <input class="form-control" id="taskid" type="text" placeholder="Type ID"> -->
+            <!-- we have to create it as label else anyone can change the value of the taskID which is autoIncremented -->
+
+            <label class="form-control" id="taskid" type="text" placeholder="Type ID">
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Name</label>
+            <input class="form-control" id="taskname" type="text" placeholder="Type Name">
+        </div>
+
+        <div class="form-group">
+            <label for="">Description</label>
+            <textarea class="form-control" rows="10" cols="30" id="taskdescr" placeholder="Type Description"></textarea>
+            <!-- if your press enter after the opening tag of text area then it will take space in the web -->
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success" id="add">Add</button>
+            <button class="btn btn-danger" id="delete">Delete</button>
+            <button class="btn btn-primary" id="search">Search</button>
+            <button class="btn btn-secondary">Update</button>
+            <button class="btn btn-success">Save</button>
+            <button class="btn btn-info" id="localSave">Save to Local</button>
+            <button class="btn btn-warning" id="loadLocal">Load Local</button>
+            <button class="btn btn-primary">Load Server</button>
+            <button class="btn btn-warning" id="sort">Sort</button>
+            <button class="btn btn-danger">Clear All</button>
+        </div>
+
+        <div id="searchBox">
+            <fieldset>
+                <legend>Search Items here: </legend>
+                <!-- this is the title of the search box -->
+                <input id="searchTask" type="text" placeholder="Enter name to search">
+            </fieldset>
+        </div>
+
+        <div>
+            <h3>Total records are <span id="total"></span> Mark Records are <span id="mark"></span> Unmark Records are
+                <span id="unmark"></span></h3>
+        </div>
+        <div>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                        <th>OPERATIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

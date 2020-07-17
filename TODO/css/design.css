@@ -1,0 +1,17 @@
+.size{
+    width: 36px;
+    height: 36px;
+}
+
+.hand{
+    /* it will convert the cursor to a hand */
+    cursor: pointer;
+}
+
+/* #searchBox{
+    display: none;
+} */
+/* we will add this class dynamically to the search box to make it appear and disappear when :required */
+.hide{
+    display: none;
+}
